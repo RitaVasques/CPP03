@@ -6,22 +6,31 @@
 /*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:31:17 by ritavasques       #+#    #+#             */
-/*   Updated: 2024/09/09 13:48:49 by ritavasques      ###   ########.fr       */
+/*   Updated: 2024/09/09 18:24:47 by ritavasques      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void) {
 
-    ClapTrap trap = ClapTrap("Trap");
+    ScavTrap scav = ScavTrap("Scav");
+    ClapTrap clap = ClapTrap("Clap");
 
-    trap.attack("Clap");
-    trap.takeDamage(5);
-    trap.beRepaired(2);
-    trap.attack("Clap");
-    trap.takeDamage(10);
-    trap.attack("Clap");
+    scav.guardGate();
+    scav.attack("Clap");
+    clap.attack("Scav");
+    scav.guardGate();
+    scav.takeDamage(5);
+    scav.guardGate();
+    scav.beRepaired(2);
+    scav.guardGate();
+    scav.attack("Clap");
+    clap.attack("Scav");
+    scav.guardGate();
+    scav.takeDamage(95);
+    scav.guardGate();
+    scav.attack("Clap");
 
     return (0);
 }

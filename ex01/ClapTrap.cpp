@@ -6,7 +6,7 @@
 /*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:37:42 by ritavasques       #+#    #+#             */
-/*   Updated: 2024/09/09 15:39:25 by ritavasques      ###   ########.fr       */
+/*   Updated: 2024/09/09 17:58:47 by ritavasques      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,32 +40,6 @@ ClapTrap& ClapTrap::operator=( const ClapTrap& other ) {
     this->_attackDamage = other._attackDamage;
     return (*this);
 }
-
-//GETTERS
-std::string ClapTrap::getName( void ) const {
-    return (this->_name);
-}
-
-unsigned int ClapTrap::getHitPoints( void ) const {
-    return (this->_hitPoints);
-}
-
-unsigned int ClapTrap::getEnergy( void ) const {
-    return (this->_energy);
-}
-
-unsigned int ClapTrap::getAttackDamage( void ) const {
-    return (this->_attackDamage);
-}
-
-//SETTERS
-void ClapTrap::setName( std::string name ) { this->_name = name; }
-
-void ClapTrap::setHit( unsigned int amount ) { this->_hitPoints = amount; }
-
-void ClapTrap::setEnergy( unsigned int amount ) { this->_energy = amount; }
-
-void ClapTrap::setAttack( unsigned int amount ) { this->_attackDamage = amount; }
 
 //OTHER FUNCTIONS
 void	ClapTrap::attack(const std::string& target) {

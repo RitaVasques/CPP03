@@ -6,7 +6,7 @@
 /*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:43:06 by ritavasques       #+#    #+#             */
-/*   Updated: 2024/09/09 16:18:22 by ritavasques      ###   ########.fr       */
+/*   Updated: 2024/09/09 18:23:17 by ritavasques      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ ScavTrap::ScavTrap( const ScavTrap& other ) : ClapTrap( other ) {
     *this = other;
 }
 
+//DESTRUCTOR
+ScavTrap::~ScavTrap( void ) {
+    std::cout << "ScavTrap destructor called" << std::endl;
+}
+
 ScavTrap& ScavTrap::operator=( const ScavTrap& other ) {
     ClapTrap::operator=( other );
     this->_gate = other._gate;
@@ -40,7 +45,7 @@ ScavTrap& ScavTrap::operator=( const ScavTrap& other ) {
 }
 
 void ScavTrap::guardGate( void ) {
-    if (getHitPoints() <= 3 )
+    if (this->_hitPoints <= 3 )
         this->_gate = true;
     else
         this->_gate = false;
