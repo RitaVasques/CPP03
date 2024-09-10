@@ -6,7 +6,7 @@
 /*   By: ritavasques <ritavasques@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:43:06 by ritavasques       #+#    #+#             */
-/*   Updated: 2024/09/09 18:23:17 by ritavasques      ###   ########.fr       */
+/*   Updated: 2024/09/10 09:36:44 by ritavasques      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void ScavTrap::guardGate( void ) {
 void	ScavTrap::attack(const std::string& target) {
     std::cout << "ScavTrap " << this->_name;
     
-    this->_attackDamage = 5;
     if (this->_hitPoints == 0)
         std::cout << "is dead" << std::endl;
     else if (this->_gate)
